@@ -2166,7 +2166,7 @@ async function removeBg(){
     formData.append('image_file', blob, 'photo.png');
     formData.append('format', 'jpg');        // png|jpg|webp
     formData.append('channels', 'rgba');      // rgba|alpha
-    formData.append('bg_color', 'FFFFFF');    // 흰 배경
+    formData.append('bg_color', '#FFFFFF');  // 흰 배경 (# 필수)
 
     const resp=await fetch(PHOTOROOM_API,{
       method:'POST',
